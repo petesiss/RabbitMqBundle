@@ -30,7 +30,13 @@ Put the [php-amqplib](http://github.com/tnc/php-amqplib) library into the vendor
 
     $ git clone git://github.com/tnc/php-amqplib.git vendor/php-amqplib
 
-Add the [php-amqplib](http://github.com/tnc/php-amqplib) autoloading to your project's bootstrap script (app/autoload.php):
+Add the OldSound Namespace and the [php-amqplib](http://github.com/tnc/php-amqplib) autoloading to your project's bootstrap script (app/autoload.php):
+
+    $loader->registerNamespaces(array(
+        ...
+        'OldSound'         => __DIR__.'/../src',
+        ...
+    ));
 
     spl_autoload_register(function($class) use ($vendorDir)
     {
