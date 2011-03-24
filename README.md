@@ -38,10 +38,10 @@ Add the OldSound Namespace and the [php-amqplib](http://github.com/tnc/php-amqpl
         ...
     ));
 
-    spl_autoload_register(function($class) use ($vendorDir)
+    spl_autoload_register(function($class)
     {
         if (strpos($class, 'AMQPConnection') === 0) {
-            require_once $vendorDir.'/php-amqplib/amqp.inc';
+            require_once __DIR__.'/../vendor/php-amqplib/amqp.inc';
             return true;
         }
     });
