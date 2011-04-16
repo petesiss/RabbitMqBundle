@@ -38,13 +38,7 @@ Put the [php-amqplib](http://github.com/tnc/php-amqplib) library into the vendor
 
     $ git clone git://github.com/tnc/php-amqplib.git vendor/php-amqplib
 
-Add the OldSound Namespace and the [php-amqplib](http://github.com/tnc/php-amqplib) autoloading to your project's bootstrap script (app/autoload.php):
-
-    $loader->registerNamespaces(array(
-        ...
-        'OldSound'         => __DIR__.'/../src',
-        ...
-    ));
+Add the [php-amqplib](http://github.com/tnc/php-amqplib) autoloading to your project's bootstrap script (app/autoload.php):
 
     spl_autoload_register(function($class)
     {
@@ -71,7 +65,7 @@ Add the RabbitMqBundle to your application's kernel:
 
 Configure the `rabbitmq` service in your config:
 
-    rabbitmq.config:
+    old_sound_rabbit_mq:
         connections:
             default:
                 host:      'localhost'
